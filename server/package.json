@@ -1,0 +1,21 @@
+{
+  "name": "elevator-servicebox-server",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ERP/Freshdesk/Airtable proxy for Elevator Servicebox (replaces the Val.town proxy)",
+  "type": "module",
+  "main": "src/index.js",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "start": "node src/index.js",
+    "dev": "node --watch --env-file-if-exists=.env src/index.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "@hono/node-server": "^2.1.3",
+    "croner": "^10.0.1",
+    "hono": "^4.13.13"
+  }
+}
