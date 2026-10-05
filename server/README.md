@@ -15,7 +15,7 @@ npm test
 
 ## Deploy on Railway
 
-- Service root directory: `server` (start command and health check come from `railway.json`).
+- Service settings: root directory `/server`, start command `npm start`, health check path `/healthz`, restart on failure. These are set on the Railway service itself (Railway no longer uses `railway.json`).
 - Add a volume mounted at `/data` and set `DATA_DIR=/data`, so sessions and sync status survive deploys.
 - Set the secrets from `.env.example` as Railway service variables.
 - Set `SYNC_CRON` (for example `*/30 * * * *`, UTC) to replace the Val.town cron file. Leave it empty to disable background sync.
